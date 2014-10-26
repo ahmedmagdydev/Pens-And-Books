@@ -24,7 +24,7 @@
             <button type="submit"></button>
           </form>
         </div>
-        <div id="headNav" class="pull-right">
+        <div id="headNav" class="pull-left">
           <ul class="pageNav">
             <li class="flag"><a href="#" class="hide-text">
                 <u>flag</u></a><span class="alert active">5</span>
@@ -115,6 +115,8 @@
         </div>
         <div class="user-actions">
           <ul>
+            <li><a href="article-add.html" class="my-pens">إضافة مقال</a></li>
+            <li><a href="book-add.html" class="my-books">إضافة كتاب</a></li>
           </ul>
         </div>
         <!--.social
@@ -134,40 +136,119 @@
     </aside>
     <article>
       <div class="top clearfix">
-        <div id="search" class="search">
-          <div class="filter">
-            <ul class="clearfix">
-              <li class="selected"><a href="#">الكل</a></li>
-              <li><a href="#">كتب</a></li>
-              <li><a href="#">مقالات</a></li>
-              <li><a href="#">اشخاص</a></li>
-            </ul>
-          </div>
-          <div class="results">
-            <h2>نتائج البحث (65)</h2>
-            <section class="result book clearfix"><img src="img/book.jpg" class="result-img">
-              <div class="writer-details">
-                <div class="user-pic"><img src="img/commenter.jpg"></div>
-                <div class="user-name"><a href="profile.html">Karim Farid</a></div>
+        <div class="panel-header">
+          <h2>إضافة كتاب</h2>
+        </div>
+        <div class="panel-body">
+          <div class="clearfix">
+            <div class="home">
+              <div class="book-add">
+                <div class="form-horizontal flat">
+                  <div class="form-group">
+                    <label>اسم الكتاب</label>
+                    <div class="control">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>القسم</label>
+                    <div class="control">
+                      <select class="select">
+                        <option>option </option>
+                        <option>option </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>نبذه</label>
+                    <div class="control">
+                      <textarea placeholder="نص الرسالة" class="form-control"></textarea>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3><a href="#">صالح نفسك</a></h3>
-              <p>التشهناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل  الخارجي للنص أو شكل  أن المحتوى المقروء لصفحة ما سيلهي القارئ اَ <a href="#" class="more">   .... المزيد</a></p>
-            </section>
-            <section class="result article clearfix"><img src="img/article.jpg" class="result-img">
-              <div class="writer-details">
-                <div class="user-pic"><img src="img/commenter.jpg"></div>
-                <div class="user-name"><a href="profile.html">Karim Farid</a></div>
+            </div>
+            <div id="croppic" class="cover"></div>
+            <div class="form-group">
+              <table class="table-details">
+                <thead>
+                  <tr>
+                    <th>المكان</th>
+                    <th>العنوان</th>
+                    <th>التليفون</th>
+                    <th><a href="#" class="add-row"></a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td><a href="#" class="delete-row"></a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td><a href="#" class="delete-row"></a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td><a href="#" class="delete-row"></a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td><a href="#" class="delete-row"></a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control">
+                    </td>
+                    <td><a href="#" class="delete-row"></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="form-control">
+              <div class="button-group">
+                <button type="button" class="btn btn-default">نشر</button>
+                <button type="button" class="btn btn-danger">إلغاء</button>
               </div>
-              <h3><a href="#">صالح نفسك</a></h3>
-              <p>التشهناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل  الخارجي للنص أو شكل  أن المحتوى المقروء لصفحة ما سيلهي القارئ اَ <a href="#" class="more">   .... المزيد</a></p>
-            </section>
-            <section class="result person clearfix"><img src="img/profile-pic.jpg" class="result-img">
-              <h3><a href="#">كريم فريد</a></h3>
-              <p>التشهناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل  الخارجي للنص أو شكل  أن المحتوى المقروء لصفحة ما سيلهي القارئ اَ <a href="#" class="more">   .... المزيد</a></p>
-            </section>
-          </div>
-          <div class="pagination">
-            <button type="button" class="btn"><i class="fa fa-angle-down"></i></button>
+            </div>
           </div>
         </div>
       </div>
