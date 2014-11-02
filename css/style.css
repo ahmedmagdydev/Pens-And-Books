@@ -405,6 +405,35 @@ th {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?9jo8kz");
+  src: url("fonts/icomoon.eot?#iefix9jo8kz") format("embedded-opentype"), url("fonts/icomoon.woff?9jo8kz") format("woff"), url("fonts/icomoon.ttf?9jo8kz") format("truetype"), url("fonts/icomoon.svg?9jo8kz#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-profile, .icon-drawer {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1.2;
+  font-size: 21px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-profile:before {
+  content: "\e601";
+}
+
+.icon-drawer:before {
+  content: "\e600";
+}
+
 body {
   font-size: 14px;
   line-height: 19px;
@@ -478,6 +507,7 @@ html, body {
   margin: 9px;
   border: 1px solid #e8e8e8;
   float: right;
+  width: 59%;
   width: calc(100% - 283px - 269px);
   background-color: #fff;
 }
@@ -983,13 +1013,23 @@ input[type="file"]:active::before {
   color: #ffa5a5;
 }
 
+.compose textarea.form-control, .book-add textarea.form-control, .article-add textarea.form-control {
+  height: 200px;
+}
+
 .login {
   background: url(../img/login-bg.jpg) no-repeat top center fixed;
   background-size: cover;
   padding: 25px 50px;
 }
+.login .main-content {
+  margin-top: 0;
+}
 .login .logo {
   float: left;
+}
+.login label {
+  text-align: right;
 }
 .login .new-user {
   float: right;
@@ -1093,14 +1133,19 @@ input[type="file"]:active::before {
   margin: 0;
 }
 .top-nav .pageLogo a {
-  width: 171px;
+  width: 229px;
   height: 33px;
   background: url(../img/logo-page.png);
   display: block;
 }
+.top-nav #headNav {
+  width: 277px;
+  margin-right: -19px;
+}
 .top-nav ul.pageNav {
   padding: 0;
-  margin: 5px 0 5px 100px;
+  width: 88px;
+  margin: 5px auto;
 }
 .top-nav .pageNav > li {
   display: inline;
@@ -1177,9 +1222,11 @@ input[type="file"]:active::before {
 }
 .top-nav .main-search {
   position: relative;
+  width: 50.5%;
+  width: calc(100% - 657px);
 }
 .top-nav .main-search input {
-  width: 700px;
+  width: 100%;
   background: white;
   padding: 5px 5px 5px 38px;
   border: none;
@@ -1235,6 +1282,18 @@ input[type="file"]:active::before {
   margin: 0 2px;
   font-size: 25px;
 }
+.main-nav li.main-home {
+  font-size: 28px;
+  padding-top: 14px;
+  padding-bottom: 9px;
+}
+.main-nav li.profile {
+  padding-bottom: 10px;
+  padding-top: 11px;
+}
+.main-nav li.profile i {
+  font-size: 25px;
+}
 .main-nav li:hover a {
   color: #0ba2ce;
 }
@@ -1251,6 +1310,7 @@ input[type="file"]:active::before {
 }
 
 aside {
+  height: 91.9%;
   height: calc(100% - 51px);
   float: right;
   position: fixed;
@@ -1682,6 +1742,7 @@ a.user .domain {
 }
 
 article {
+  width: 79%;
   width: calc(100% - 282px);
   float: right;
   margin: 61px 275px 0 0 !important;
@@ -1769,6 +1830,7 @@ article.newsFeed .top {
 .profile-summary .profile-info {
   overflow: hidden;
   position: relative;
+  width: 72%;
   width: calc(100% - 288px);
   float: right;
 }
@@ -1785,6 +1847,7 @@ article.newsFeed .top {
   color: #646464;
   border-bottom: 2px solid #0099c6;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .bottom {
@@ -1865,10 +1928,25 @@ article.profile .articles .panel-header, article.profile .books .panel-header {
 article.profile .articles > div, article.profile .books > div {
   margin: 8px 0.3% !important;
   width: 19.3% !important;
+  position: relative;
 }
 article.profile .articles > div .category, article.profile .books > div .category {
   float: right;
   color: #999999;
+}
+article.profile .articles > div a.close, article.profile .books > div a.close {
+  position: absolute;
+  left: 7px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  height: 24px;
+  width: 24px;
+  font-size: 19px;
+  opacity: 0;
+  transition: opacity .2s linear;
+}
+article.profile .articles > div:hover a.close, article.profile .books > div:hover a.close {
+  opacity: 1;
 }
 
 .user-pic img {
@@ -1907,6 +1985,7 @@ article.profile .articles > div .category, article.profile .books > div .categor
 }
 
 .home {
+  width: 72%;
   width: calc(100% - 221px);
   float: left;
 }
@@ -1940,14 +2019,14 @@ article.profile .articles > div .category, article.profile .books > div .categor
 .home .content.pen h2 {
   background: url(../img/article-title.png) no-repeat right;
 }
-.home .book-view label {
+.home .book-view label, .home .article-view label {
   width: 12%;
   display: inline-block;
   float: right;
   padding-top: 2px;
   padding-right: 21px;
 }
-.home .book-view p {
+.home .book-view p, .home .article-view p {
   width: 80%;
   float: right;
 }
@@ -2047,7 +2126,7 @@ article.store .articles > div, article.profile .articles > div {
 }
 
 .followers {
-  max-width: 992px;
+  width: 992px;
   margin: 0 auto;
 }
 .followers .pagination {
@@ -2074,6 +2153,12 @@ article.store .articles > div, article.profile .articles > div {
   position: absolute;
   bottom: 10px;
   left: 10px;
+  background-color: #0ba2ce;
+  padding: 2px 5px;
+  transition: background-color .2s linear;
+}
+.follower .follow-me:hover {
+  background-color: #31c8f4;
 }
 
 .comment-area {
@@ -2097,12 +2182,14 @@ article.store .articles > div, article.profile .articles > div {
   background-color: #0984a7;
 }
 .write-comment textarea {
+  width: 90.4%;
   width: calc(100% - 78px);
   border: 1px solid #e8e8e8;
   vertical-align: top;
-  padding-right: 3%;
+  padding-right: 7px;
   resize: vertical;
   line-height: 1.4 !important;
+  height: 44px;
 }
 
 .comments .title {
